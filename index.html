@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Todolist App</title>
+		<!-- Fontawesome-icons -->
+		<script
+			src="https://kit.fontawesome.com/84a3fca9be.js"
+			crossorigin="anonymous"></script>
+		<script src="main.js" defer type="module"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<h1>Todolist App</h1>
+			<header>
+				<form action="">
+					<input type="text" placeholder="Add a task..." id="name_input_task" />
+					<input type="date" id="date_input_task" />
+					<button type="submit" id="btn_add_task">Add task</button>
+				</form>
+			</header>
+			<div class="container_buttons">
+				<button id="btn_filter">Filter</button>
+				<button id="btn_delete_all">Delete all</button>
+			</div>
+
+			<table class="container_task">
+				<tr>
+					<th>Task</th>
+					<th>Date</th>
+					<th>Status</th>
+					<th>Actions</th>
+				</tr>
+			</table>
+		</main>
+	</body>
+</html>

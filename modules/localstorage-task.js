@@ -32,3 +32,7 @@ export function loadingTaskToLocalStorage() {
 		buildTask(task.name, task.date, task.status);
 	});
 }
+
+export function deleteTasksLocalStorage() {
+	JSON.stringify(localStorage.clear());
+}

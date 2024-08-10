@@ -1,13 +1,15 @@
 import { buildTask } from "./modules/buil-task.js";
 import {
 	addTaskLocalStorage,
+	deleteTasksLocalStorage,
 	loadingTaskToLocalStorage,
 } from "./modules/localstorage-task.js";
 
 const $nameInputTask = document.getElementById("name_input_task");
 const $dataInputTask = document.getElementById("date_input_task");
+const $btnDeleteAll = document.getElementById("btn_delete_all");
 
-const $containerTasks = document.querySelector(".container_task");
+const $containerTasks = document.querySelector(".container_tasks");
 const $form = document.querySelector("form");
 
 function addTask(e) {
@@ -32,6 +34,10 @@ function addTask(e) {
 	$dataInputTask.value = "";
 }
 
+$btnDeleteAll.addEventListener("click", () => {
+	deleteTasksLocalStorage();
+	$containerTasks.textContent = "";
+});
 $form.addEventListener("submit", addTask);
 
 loadingTaskToLocalStorage();

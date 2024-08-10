@@ -4,6 +4,7 @@ import { deleteTask } from "./delete-task.js";
 
 export function buildTask(name, date) {
 	let task = document.createElement("tr");
+	task.classList.add("task");
 	task.innerHTML = `
     <td class="name_task">${name}</td>
 	<td class="date_task">${date}</td>
